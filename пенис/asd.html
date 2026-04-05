@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <h1>Mini Shop</h1>
+
+  <div class="icons">
+    <button class="icon-btn cart">🛒
+      <span class="count cart-count">0</span>
+    </button>
+
+    <button class="icon-btn fav">❤️
+      <span class="count fav-count">0</span>
+    </button>
+  </div>
+</header>
+
+<div class="panel cart-panel" hidden>
+  <h3>Корзина</h3>
+  <div class="cart-items"></div>
+</div>
+
+<div class="panel fav-panel" hidden>
+  <h3>Избранное</h3>
+  <div class="fav-items"></div>
+</div>
+
+<div class="products">
+
+  <div class="card" data-id="1">
+    <img src="https://avatars.mds.yandex.net/i?id=7eeb98bafcf6b06f5cf2fa57a2d4450e26c3d3f2-5192432-images-thumbs&n=13" alt="Наушники">
+    <h4>Наушники</h4>
+    <p>Крутой звук</p>
+    <button class="add">В корзину</button>
+    <button class="like-item">❤️</button>
+  </div>
+
+  <div class="card" data-id="2">
+    <img src="https://avatars.mds.yandex.net/i?id=38182238219fd1b3d082cbb72b87257758baea9c-3139572-images-thumbs&n=13" alt="Ноутбук">
+    <h4>Ноутбук</h4>
+    <p>Мощный и быстрый</p>
+    <button class="add">В корзину</button>
+    <button class="like-item">❤️</button>
+  </div>
+
+  <div class="card" data-id="3">
+    <img src="https://i.pinimg.com/736x/92/2f/8e/922f8e62dfcd5c6ebf194d67c909b5fd.jpg" alt="Телефон">
+    <h4>Телефон</h4>
+    <p>Современный смартфон</p>
+    <button class="add">В корзину</button>
+    <button class="like-item">❤️</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
