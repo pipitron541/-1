@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тамагочи</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Тамагочи</h1>
+
+    <div class="pet-container">
+      <div class="pet-face" id="petFace" aria-label="Питомец">🐣</div>
+
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-label">Сытость</span>
+          <div class="stat-bar-wrap">
+            <div class="stat-bar bar-hunger" id="barHunger" style="width:70%"></div>
+          </div>
+          <span class="stat-value" id="valHunger">70</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Счастье</span>
+          <div class="stat-bar-wrap">
+            <div class="stat-bar bar-happiness" id="barHappiness" style="width:70%"></div>
+          </div>
+          <span class="stat-value" id="valHappiness">70</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Энергия</span>
+          <div class="stat-bar-wrap">
+            <div class="stat-bar bar-energy" id="barEnergy" style="width:70%"></div>
+          </div>
+          <span class="stat-value" id="valEnergy">70</span>
+        </div>
+      </div>
+
+      <div class="status-msg" id="statusMsg" aria-live="polite"></div>
+
+      <div class="buttons">
+        <button class="btn-feed" id="btnFeed" onclick="handleFeed()">🍖 Покормить</button>
+        <button class="btn-play" id="btnPlay" onclick="handlePlay()">🎮 Поиграть</button>
+        <button class="btn-sleep" id="btnSleep" onclick="handleSleep()">😴 Спать</button>
+        <button class="btn-train" id="btnTrain" onclick="handleTrain()">🏋️ Дрессировка</button>
+        <div class="wander-msg" id="wanderMsg"></div>
+        <button class="btn-catch" id="btnCatch" onclick="handleCatch()">🏃 Поймать питомца!</button>
+        <button class="btn-restart" id="btnRestart" onclick="handleRestart()">🔄 Начать заново</button>
+      </div>
+    </div>
+
+    <button class="debug-toggle" onclick="toggleDebug()">⚙ отладка</button>
+
+    <div class="debug-panel" id="debugPanel">
+      <h2>Параметры отладки</h2>
+      <div class="debug-row">
+        <label>Длительность действия (мс)</label>
+        <input type="number" id="dbgDuration" value="3000" min="100" />
+      </div>
+      <div class="debug-row">
+        <label>Случайность (мс)</label>
+        <input type="number" id="dbgRandom" value="1000" min="0" />
+      </div>
+      <div class="debug-row">
+        <label>Изм. сытости</label>
+        <input type="number" id="dbgFeedAmount" value="30" min="1" max="100" />
+      </div>
+      <div class="debug-row">
+        <label>Изм. счастья</label>
+        <input type="number" id="dbgHappyAmount" value="25" min="1" max="100" />
+      </div>
+      <div class="debug-row">
+        <label>Изм. энергии (игра -)</label>
+        <input type="number" id="dbgEnergyPlayAmount" value="15" min="1" max="100" />
+      </div>
+      <div class="debug-row">
+        <label>Убыв. показателей (сек)</label>
+        <input type="number" id="dbgDecayInterval" value="5" min="1" />
+      </div>
+      <div class="debug-row">
+        <label>Блуждание — окно (мс)</label>
+        <input type="number" id="dbgWanderTime" value="3000" min="500" />
+      </div>
+      <div class="debug-row">
+        <label>Интервал блуждания (сек)</label>
+        <input type="number" id="dbgWanderInterval" value="15" min="3" />
+      </div>
+      <button class="btn-debug-restart" onclick="handleRestart()">↺ Применить и перезапустить</button>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
